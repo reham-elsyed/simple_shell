@@ -13,7 +13,7 @@ int ar_atoi(const char *str)
 		if (*str == '-')
 			sign = -1;
 		else if (*str >= '0' && *str <= '9')
-			result = result *10 + *str - '0';
+			result = result * 10 + *str - '0';
 		else if (result > 0)
 			break;
 		str++;
