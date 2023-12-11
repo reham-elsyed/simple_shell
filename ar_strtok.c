@@ -7,7 +7,7 @@
  */
 char *ar_strtok(char *str, const char *delim)
 {
-	static char *s = NULL;
+	static char *s;
 	char *start = NULL;
 
 	if (str == NULL)
@@ -23,23 +23,23 @@ char *ar_strtok(char *str, const char *delim)
 	{
 		str++;
 	}
-		if (*str == '\0')
-		{
-			s = NULL;
-			return (NULL);
-		}
-		while (*str != '\0' && *str != *delim)
-		{
-			str++;
-		}
-		if (*str != '\0')
-		{
-			*str = '\0';
-			s = str + 1;
-		}
-		else
-		{
-			s = NULL;
-		}
-		return (start);
+	if (*str == '\0')
+	{
+		s = NULL;
+		return (NULL);
+	}
+	while (*str != '\0' && *str != *delim)
+	{
+		str++;
+	}
+	if (*str != '\0')
+	{
+		*str = '\0';
+		s = str + 1;
+	}
+	else
+	{
+		s = NULL;
+	}
+	return (start);
 }
