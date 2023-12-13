@@ -32,7 +32,7 @@ int ar_line(char line[], int fd)
  */
 int main(int ac, char *av[])
 {
-	char *prompt = "ar$ ";
+	char *prompt = "#ar$ ";
 	int i, status, fd = 0, counter = 0;
 	char line[LINE_SIZE], *sep = " ", **argv = NULL;
 	int chars_read;
