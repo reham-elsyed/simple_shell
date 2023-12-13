@@ -1,5 +1,4 @@
 #include "main.h"
-#include <fcntl.h>
 /**
  * ar_getpath - get path from operation
  * @op: input operation
@@ -10,7 +9,6 @@ char *ar_getpath(const char *op)
 	char *path = getenv("PATH");
 	char *sep = ":", *result;
 	char **paths = ar_split(path, sep);
-/**	struct stat stats;**/
 	int i, j, result_len, fd;
 
 	if (paths == NULL)
