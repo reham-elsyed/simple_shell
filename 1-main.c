@@ -42,7 +42,7 @@ int main(int ac, char *av[])
 	while (1)
 	{
 		counter++;
-		if (!fd && isatty(fileno(stdin)))
+		if (!fd && isatty(STDIN_FILENO))
 			ar_puts(prompt);
 		chars_read = ar_line(line, fd);
 		if (chars_read == -1)
