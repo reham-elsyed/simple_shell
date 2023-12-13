@@ -34,7 +34,6 @@ int ar_getline(char *, int);
 int ar_putchar(char);
 int ar_puts(char *);
 int ar_strcmp(const char *, const char *);
-int ar_mkdir(char **);
 int ar_env(char **);
 int ar_execvp(char **);
 int ar_exit(char **);

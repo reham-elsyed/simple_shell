@@ -23,7 +23,6 @@ int ar_execute(char **av)
 	op_t ops[] = {
 		{"exit", ar_exit},
 		{"env", ar_env},
-		{"mkdir", ar_mkdir},
 		{NULL, NULL}
 	};
 	int i;
