@@ -37,6 +37,7 @@ int main(int ac, char *av[])
 	char line[LINE_SIZE], *sep = " ", **argv = NULL;
 	int chars_read;
 
+	errno = 0;
 	if (ac == 2)
 		fd = open(av[1], O_RDONLY);
 	while (1)
