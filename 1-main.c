@@ -35,15 +35,15 @@ int main(int ac, char *av[])
 	char *prompt = "#ar$ ";
 	int i, status, fd = 0, counter = 0;
 	char line[LINE_SIZE], *sep = " ", **argv = NULL;
-	int chars_read;
+	int chars_read, is_atty = isatty(0);
 
-	errno = 0;
 	if (ac == 2)
 		fd = open(av[1], O_RDONLY);
+	errno = 0;
 	while (1)
 	{
 		counter++;
-		if (!fd && isatty(0))
+		if (!fd && is_atty)
 			ar_puts(prompt);
 		chars_read = ar_line(line, fd);
 		if (chars_read == -1)

@@ -7,10 +7,11 @@
  */
 int ar_getline(char *line, int fd)
 {
-	int sum = 0, current, i;
+	int sum = 0, current, i, err_num = errno;
 
 	if (fd > 1 || !isatty(0))
 	{
+	errno = err_num;
 	for (i = 0; i < LINE_SIZE; i++)
 	{
 		current = read(fd, line + i, 1);
