@@ -20,6 +20,7 @@ int ar_line(char line[], int fd)
 			chars_read = i;
 			line[i] = '\0';
 		}
+	ar_trim(line, &chars_read);
 	if (chars_read == 0)
 		return (0);
 	return (1);

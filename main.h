@@ -24,6 +24,7 @@ struct op
  * op_t - operation type
  */
 typedef struct op op_t;
+void ar_trim(char [], int *);
 int ar_atoi(const char *);
 int ar_putcerr(char);
 int ar_putserr(const char *);
