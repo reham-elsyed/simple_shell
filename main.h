@@ -2,12 +2,10 @@
 #define MAIN_H
 #define LINE_SIZE 1024
 #define EXIT_CODE 3040
-#include <errno.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
 #include <sys/wait.h>
-#include <sys/types.h>
 #include <fcntl.h>
 #include <sys/stat.h>
 extern char **environ;
