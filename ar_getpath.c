@@ -6,11 +6,14 @@
  */
 char *ar_getpath(const char *op)
 {
-	char *path = getenv("PATH");
+	char *path, **paths;
 	char *sep = ":", *result;
-	char **paths = ar_split(path, sep);
 	int i, j, result_len, fd;
 
+	path = getenv("PATH");
+	if (path == NULL)
+		return (NULL);
+	paths = ar_split(path, sep);
 	if (paths == NULL)
 		return (NULL);
 	for (i = 0; paths[i] != NULL; i++)
