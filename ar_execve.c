@@ -36,5 +36,5 @@ int ar_execve(const char *pathname, char *const argv[], char *const envp[])
 		perror("fork error");
 		return (-1);
 	}
-	return (1);
+	return (0);
 }

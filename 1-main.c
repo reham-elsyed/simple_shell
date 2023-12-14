@@ -46,7 +46,7 @@ int main(int ac, char *av[])
 			ar_puts(prompt);
 		chars_read = ar_line(line, fd);
 		if (chars_read == -1)
-			return (-1);
+			return (0);
 		if (chars_read == 0)
 			continue;
 		argv = ar_split(line, sep);
