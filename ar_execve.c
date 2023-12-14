@@ -15,7 +15,7 @@ int ar_execve(const char *pathname, char *const argv[], char *const envp[])
 	if (pid == 0)
 	{
 		execve(pathname, argv, envp);
-		exit(EXIT_FAILURE);
+		exit(errno);
 	}
 	else if (pid > 0)
 	{
@@ -27,8 +27,8 @@ int ar_execve(const char *pathname, char *const argv[], char *const envp[])
 		if (WIFEXITED(status))
 		{
 			exit_status = WEXITSTATUS(status);
-			if (exit_status == EXIT_FAILURE)
-				return (-1);
+			return (exit_status);
+
 		}
 	}
 	else

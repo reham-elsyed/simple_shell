@@ -53,15 +53,19 @@ int main(int ac, char *av[])
 		if (argv == NULL)
 			return (-1);
 		status = ar_execute(argv);
-		if (status == -1)
+		if (status != 0)
 		{
 			ar_putserr(av[0]);
 			ar_putserr(": ");
 			ar_putn(counter);
 			ar_putserr(": ");
 			ar_putserr(argv[0]);
-			ar_putserr(": not found\n");
+			ar_putserr(": ");
+			errno = status;
+			perror("");
 		}
+		else
+			errno = 0;
 		for (i = 0; argv[i] != NULL; i++)
 			free(argv[i]);
 		free(argv);
