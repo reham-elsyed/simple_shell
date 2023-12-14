@@ -40,7 +40,7 @@ void ar_open(int *fd, const char *path, const char *name)
 		ar_putserr(": 0: Can't open ");
 		ar_putserr(path);
 		ar_putcerr('\n');
-		exit(errno);
+		exit(127);
 	}
 }
 /**
