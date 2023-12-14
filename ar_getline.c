@@ -11,18 +11,18 @@ int ar_getline(char *line, int fd)
 
 	if (fd > 1 || !isatty(0))
 	{
-	errno = err_num;
-	for (i = 0; i < LINE_SIZE; i++)
-	{
-		current = read(fd, line + i, 1);
-		if (current == 0)
-			return (-1);
-		sum += current;
-		if (line[i] == '\n')
-			break;
-	}
-	line[i] = '\0';
-	return (sum);
+		errno = err_num;
+		for (i = 0; i < LINE_SIZE; i++)
+		{
+			current = read(fd, line + i, 1);
+			if (current == 0)
+				return (-1);
+			if (line[i] == '\n' || line[i] == EOF)
+				break;
+			sum += current;
+		}
+		line[i] = '\0';
+		return (sum);
 	}
 	sum = read(fd, line, LINE_SIZE);
 	if (sum == 0)

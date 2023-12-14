@@ -50,7 +50,9 @@ int main(int ac, char *av[])
 		if (chars_read == -1)
 			return (0);
 		if (chars_read == 0)
+		{
 			continue;
+		}
 		argv = ar_split(line, sep);
 		if (argv == NULL)
 			return (-1);

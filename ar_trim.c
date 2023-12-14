@@ -14,6 +14,7 @@ void ar_trim(char str[], int *n)
 	{
 		str[0] = '\0';
 		*n = 0;
+		return;
 	}
 	if (pos > -1)
 	{
