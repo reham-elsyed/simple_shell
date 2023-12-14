@@ -9,7 +9,7 @@ int ar_exit(char **av)
 	int i, result;
 
 	if (av[1] == NULL)
-		result = 0;
+		result = 2;
 	else
 		result = ar_atoi(av[1]);
 	for (i = 0; av[i] != NULL; i++)
