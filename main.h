@@ -7,7 +7,6 @@
 #include <unistd.h>
 #include <sys/wait.h>
 #include <fcntl.h>
-#include <sys/stat.h>
 extern char **environ;
 /**
  * struct op - operation structure
