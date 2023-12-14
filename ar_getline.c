@@ -17,7 +17,7 @@ int ar_getline(char *line, int fd)
 			current = read(fd, line + i, 1);
 			if (current == 0)
 				exit(errno);
-			if (line[i] == '#' || line[i] == '\n' || line[i] == EOF)
+			if (line[i] == '\n' || line[i] == EOF)
 				break;
 			sum += current;
 		}
