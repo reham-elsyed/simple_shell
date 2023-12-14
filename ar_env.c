@@ -15,5 +15,5 @@ int ar_env(char **av)
 		ar_puts(environ[i]);
 		ar_putchar('\n');
 	}
-	return (1);
+	return (0);
 }
