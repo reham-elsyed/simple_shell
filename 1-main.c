@@ -26,6 +26,23 @@ int ar_line(char line[], int fd)
 	return (1);
 }
 /**
+ * ar_open - open file
+ * @fd: input file discriptor
+ * @path: input pathname
+ * @name: input program name
+ */
+void ar_open(int *fd, const char *path, const char *name)
+{
+	*fd = open(path, O_RDONLY);
+	if (*fd == -1)
+	{
+		ar_putserr(name);
+		ar_putserr(": 0: Can't open ");
+		ar_putserr(path);
+		exit(errno);
+	}
+}
+/**
  * main - main
  * @av: args vector
  * @ac: input ac
@@ -38,9 +55,9 @@ int main(int ac, char *av[])
 	char line[LINE_SIZE], *sep = " ", **argv = NULL;
 	int chars_read, is_atty = isatty(0);
 
-	if (ac == 2)
-		fd = open(av[1], O_RDONLY);
 	errno = 0;
+	if (ac == 2)
+		ar_open(&fd, av[1], av[0]);
 	while (1)
 	{
 		counter++;
