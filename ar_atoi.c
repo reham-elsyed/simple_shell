@@ -1,8 +1,8 @@
 #include "main.h"
 /**
- * ar_atoi - string to integer
- * @str: input string
- * Return: integer
+ * ar_atoi - string to integer conversion
+ * @str: input string array
+ * Return: integer on success
  */
 int ar_atoi(const char *str)
 {
