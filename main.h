@@ -11,8 +11,8 @@
 extern char **environ;
 /**
  * struct op - operation structure
- * @name: operation name
- * @op: operation method
+ * @name: input operation name
+ * @op: input operation method
  * LONGER DISCRIPTION
  */
 struct op
