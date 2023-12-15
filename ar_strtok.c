@@ -1,8 +1,8 @@
 #include "main.h"
 /**
- * ar_strtok - make tokens from string
+ * ar_strtok - function make tokens from string
  * @str: input string
- * @delim: input delim
+ * @delim: input delimiter
  * Return: current token
  */
 char *ar_strtok(char *str, const char *delim)
