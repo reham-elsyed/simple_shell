@@ -1,8 +1,8 @@
 #include "main.h"
 /**
  * ar_exit - exit function
- * @av: input av
- * Return: status
+ * @av: input of av
+ * Return: status on success
  */
 int ar_exit(char **av)
 {
