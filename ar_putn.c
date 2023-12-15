@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * ar_putn - print numbers
+ * ar_putn - print num
  * @num: input string
  * Return: number of printed characters
  */
