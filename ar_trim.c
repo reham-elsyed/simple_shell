@@ -1,7 +1,7 @@
 #include "main.h"
 /**
  * ar_trim - trim a string
- * @str: input string
+ * @str: input string array
  * @n: input string length
  */
 void ar_trim(char str[], int *n)
