@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * ar_execve - execute function
+ * ar_execve - function to execute command
  * @pathname: input pathname
  * @argv: argument vector
  * @envp: input environ
