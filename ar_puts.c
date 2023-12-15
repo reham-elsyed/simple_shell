@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * ar_puts - puts function
+ * ar_puts - puts functio print n
  * @str: input string
  * Return: number of character printed
  */
