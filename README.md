@@ -1,1 +1,1 @@
-simple shell read me
+simple shell program in c language
