@@ -2,7 +2,7 @@
 /**
  * ar_trim - trim a string
  * @str: input string array
- * @n: input string length
+ * @n: input string len on success
  */
 void ar_trim(char str[], int *n)
 {
