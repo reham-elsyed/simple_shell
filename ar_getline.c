@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * ar_getline - get line function
+ * ar_getline - get line function to get prompt from user
  * @line: line pointer
  * @fd: input file discriptor
  * Return: number of character that has been read
