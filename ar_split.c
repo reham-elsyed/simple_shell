@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * ar_get_tok_num - get token number
+ * ar_get_tok_num - get token num
  * @str: input string
  * @sep: input seperator
  * Return: number of tokens
@@ -23,7 +23,7 @@ int ar_get_tok_num(const char *str, const char *sep)
 	return (token_num);
 }
 /**
- * ar_split - string splitter
+ * ar_split - function string splitter
  * @str: input string
  * @sep: input seperator
  * Return: array of splitted strings
